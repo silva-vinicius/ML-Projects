@@ -1,0 +1,16 @@
+name: Test import custom action
+
+on: [push]
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v2
+      - name: Run custom action
+        uses: silva-vinicius/build-mkdocs-action@master
+        with:
+          python-version: 3.8
+          requirements-file: docs/requirements.txt
+          docs-build-path: ./
