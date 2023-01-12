@@ -11,6 +11,8 @@ jobs:
       - name: Run custom action
         id: build-docs
         uses: silva-vinicius/mkdocs-build-action@master
+        with:
+          python-version: 3.9
       - name: show built files
         run: ls
       - name: save artifact
