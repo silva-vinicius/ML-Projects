@@ -9,6 +9,12 @@ jobs:
       - name: Check out source repository
         uses: actions/checkout@v2
       - name: Run custom action
+        id: build-docs
         uses: silva-vinicius/mkdocs-build-action@master
       - name: show built files
         run: ls
+      - name: save artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: built-dir
+          path: ${{ steps.build-docs.outputs.built_dir }}
