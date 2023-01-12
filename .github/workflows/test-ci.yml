@@ -10,3 +10,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Run custom action
         uses: silva-vinicius/mkdocs-build-action@master
+      - name: show built files
+        run: ls
