@@ -9,8 +9,4 @@ jobs:
       - name: Check out source repository
         uses: actions/checkout@v2
       - name: Run custom action
-        uses: silva-vinicius/build-mkdocs-action@master
-        with:
-          python-version: 3.8
-          requirements-file: docs/requirements.txt
-          docs-build-path: ./
+        uses: silva-vinicius/mkdocs-build-action
