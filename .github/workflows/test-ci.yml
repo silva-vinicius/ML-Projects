@@ -9,4 +9,4 @@ jobs:
       - name: Check out source repository
         uses: actions/checkout@v2
       - name: Run custom action
-        uses: silva-vinicius/mkdocs-build-action
+        uses: silva-vinicius/mkdocs-build-action@master
