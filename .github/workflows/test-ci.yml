@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: 3.9
       - name: show GITHUB_OUTPUT
-        run: ls $GITHUB_OUTPUT
+        run: echo ${{ steps.build_docs.outputs }}
       - name: save artifact
         uses: actions/upload-artifact@v3
         with:
