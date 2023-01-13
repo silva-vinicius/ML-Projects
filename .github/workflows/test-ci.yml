@@ -13,8 +13,8 @@ jobs:
         uses: silva-vinicius/mkdocs-build-action@composite-action
         with:
           python-version: 3.9
-      - name: show built files
-        run: ls
+      - name: show GITHUB_OUTPUT
+        run: echo $GITHUB_OUTPUT
       - name: save artifact
         uses: actions/upload-artifact@v3
         with:
