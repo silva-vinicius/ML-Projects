@@ -9,14 +9,14 @@ jobs:
       - name: Check out source repository
         uses: actions/checkout@v2
       - name: Run custom action
-        id: build-docs
+        id: build_docs
         uses: silva-vinicius/mkdocs-build-action@composite-action
         with:
           python-version: 3.9
       - name: show GITHUB_OUTPUT
-        run: echo $GITHUB_OUTPUT
+        run: ls $GITHUB_OUTPUT
       - name: save artifact
         uses: actions/upload-artifact@v3
         with:
-          name: built-dir
-          path: ${{ steps.build-docs.outputs.built_dir }}
+          name: built_dir
+          path: ${{ steps.build_docs.outputs.built_dir }}
