@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Run custom action
         id: build_docs
-        uses: bigdatabr/matrix-actions/build-mkdocs@develop
+        uses: silva-vinicius/mkdocs-build-action@composite-action
         with:
           python-version: 3.8
           docs-path: './'
