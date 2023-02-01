@@ -10,9 +10,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Run custom action
         id: build_docs
-        uses: silva-vinicius/mkdocs-build-action@composite-action
+        uses: bigdatabr/matrix-actions/build-mkdocs@develop
         with:
           python-version: 3.8
+          docs-path: './'
       - name: show GITHUB_OUTPUT
         run: echo ${{ steps.build_docs.outputs.built_dir }}
       - name: save artifact
