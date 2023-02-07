@@ -11,9 +11,9 @@ jobs:
       - name: Run custom action
         id: build_docs
         uses: silva-vinicius/mkdocs-build-action@composite-action
-        with:
-          python-version: 3.8
-          docs-path: './'
+        # with:
+        #   python-version: 3.8
+        #   docs-path: './'
       - name: show GITHUB_OUTPUT
         run: echo ${{ steps.build_docs.outputs.built_dir }}
       - name: save artifact
